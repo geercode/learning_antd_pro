@@ -11,6 +11,7 @@ import {
   BasicLayoutProps as ProLayoutComponentsProps,
   MenuDataItem,
   Settings,
+  PageHeaderWrapper,
 } from '@ant-design/pro-layout';
 import Link from 'umi/link';
 export interface BasicLayoutProps extends ProLayoutComponentsProps, ConnectProps {
@@ -113,6 +114,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
       {...props}
       {...settings}
     >
+      <PageHeaderWrapper/>
       {children}
     </ProLayoutComponents>
   );
