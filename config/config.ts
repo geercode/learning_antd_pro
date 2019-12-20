@@ -102,15 +102,93 @@ export default {
   routes: [
     {
       path: '/',
-      component: '../layouts/BasicLayout',
+      component: '../layouts/ElehallBasicLayout',
       Routes: ['src/pages/Authorized'],
       authority: ['admin', 'user'],
       routes: [
         {
           path: '/',
-          name: 'welcome',
-          icon: 'smile',
-          component: './Welcome',
+          redirect: '/home',
+        },
+        {
+          path: '/home',
+          name: '首页',
+          icon: 'home',
+          component: './Home',
+        },
+        {
+          path: '/system',
+          name: '系统管理',
+          icon: 'setting',
+          component: './Home',
+          routes: [
+            {
+              path: '/system/user',
+              name: '用户管理',
+              icon: 'user',
+              component: './Home',
+            },
+            {
+              path: '/system/role',
+              name: '角色管理',
+              icon: 'control',
+              component: './Home',
+            },
+            {
+              path: '/system/perm',
+              name: '权限管理',
+              icon: 'safety',
+              component: './Home',
+            },
+            {
+              path: '/system/menu',
+              name: '菜单管理',
+              icon: 'layout',
+              component: './Home',
+            },
+            {
+              path: '/system/dict',
+              name: '字典管理',
+              icon: 'file-search',
+              component: './Home',
+            },
+            {
+              path: '/system/dept',
+              name: '部门管理',
+              icon: 'team',
+              component: './Home',
+            },
+            {
+              path: '/system/job',
+              name: '岗位管理',
+              icon: 'apartment',
+              component: './Home',
+            },
+            {
+              path: '/system/monitor',
+              name: '系统监控',
+              icon: 'dashboard',
+              component: './Home',
+            },
+            {
+              path: '/system/log',
+              name: '服务日志',
+              icon: 'read',
+              component: './Home',
+            },
+            {
+              path: '/system/tool',
+              name: '便捷工具',
+              icon: 'tool',
+              component: './Home',
+            },
+          ]
+        },
+        {
+          path: '/profile',
+          name: '个人中心',
+          icon: 'idcard',
+          component: './Profile',
         },
       ],
     },

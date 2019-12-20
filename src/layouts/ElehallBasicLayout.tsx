@@ -1,5 +1,5 @@
 import { ConnectState, ConnectProps } from '@/models/connect';
-import RightContent from '@/components/GlobalHeader/RightContent';
+import RightContent from '@/components/Elehall/Header/RightContent';
 import { connect } from 'dva';
 import React, { useState } from 'react';
 import logo from '../assets/logo.svg';
@@ -41,21 +41,21 @@ const footerRender: BasicLayoutProps['footerRender'] = (_, defaultDom) => {
   }
   return (
     <>
-      {defaultDom}
-      <div
-        style={{
-          padding: '0px 24px 24px',
-          textAlign: 'center',
-        }}
-      >
-        <a href="https://www.netlify.com" target="_blank">
-          <img
-            src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"
-            width="82px"
-            alt="netlify logo"
-          />
-        </a>
-      </div>
+    {defaultDom}
+    <div
+      style={{
+        padding: '0px 24px 24px',
+        textAlign: 'center',
+      }}
+    >
+      <a href="https://www.netlify.com" target="_blank">
+        <img
+          src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"
+          width="82px"
+          alt="netlify logo"
+        />
+      </a>
+    </div>
     </>
   );
 };
